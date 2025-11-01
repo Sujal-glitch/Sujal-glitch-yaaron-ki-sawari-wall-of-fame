@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yaaron Ki Sawari | Wall of Fame</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body {background:#fff;color:#333;overflow-x:hidden;}
+    header {text-align:center;padding:40px 20px;}
+    header img {width:120px;border-radius:20px;}
+    header h1 {font-size:2rem;color:#b89400;margin-top:10px;}
+    header p {color:#777;font-size:1rem;}
+    
+    /* ✨ Shimmer Effect */
+    .shimmer {
+      font-size:1.2rem;
+      font-weight:600;
+      margin-top:8px;
+      background:linear-gradient(90deg,#b89400,#fff7b3,#b89400);
+      background-size:200%;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation:shine 3s linear infinite;
+    }
+    @keyframes shine {
+      0% {background-position:200% center;}
+      100% {background-position:-200% center;}
+    }
+
+    .dashboard {
+      display:flex;justify-content:center;flex-wrap:wrap;
+      gap:30px;margin:30px 0;padding:20px;background:#faf9f6;
+      border-top:2px solid #eee;border-bottom:2px solid #eee;
+    }
+    .dash-box {
+      background:white;border-radius:15px;box-shadow:0 3px 6px rgba(0,0,0,0.1);
+      padding:20px 30px;text-align:center;min-width:200px;
+      transition:transform 0.3s;
+    }
+    .dash-box:hover {transform:scale(1.05);}
+    .dash-box h2 {color:#b89400;font-size:1.5rem;}
+    .dash-box p {color:#555;}
+
+    .slider {position:relative;max-width:900px;margin:50px auto;overflow:hidden;border-radius:20px;}
+    .slides {display:flex;transition:transform 0.6s ease-in-out;}
+    .slide {min-width:100%;position:relative;}
+    .slide video {width:100%;height:auto;border-radius:20px;}
+    .slide-info {
+      position:absolute;bottom:15px;left:15px;
+      background:rgba(255,255,255,0.9);padding:10px 15px;border-radius:10px;
+    }
+    .slide-info h3 {margin-bottom:5px;color:#b89400;}
+    .nav-btn {position:absolute;top:50%;transform:translateY(-50%);
+      background:rgba(255,255,255,0.8);border:none;font-size:2rem;
+      cursor:pointer;padding:5px 15px;border-radius:50%;color:#333;}
+    .prev {left:10px;} .next {right:10px;}
+
+    .extra-videos {
+      display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin:40px 0;
+    }
+    .extra-video {
+      width:280px;background:#fff;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      overflow:hidden;transition:transform 0.3s;
+    }
+    .extra-video:hover {transform:translateY(-5px);}
+    .extra-video video {width:100%;height:auto;}
+    .extra-video p {padding:10px;color:#444;text-align:center;}
+
+    .review-links {
+      text-align:center;margin:50px 0;
+    }
+    .review-links a {
+      display:inline-block;margin:10px;padding:12px 25px;border-radius:30px;
+      text-decoration:none;color:white;background:#b89400;font-weight:600;
+      transition:background 0.3s;
+    }
+    .review-links a:hover {background:#d6b51c;}
+
+    .whatsapp-btn {
+      display:block;width:220px;margin:0 auto 60px;
+      text-align:center;padding:15px 20px;background:#25d366;
+      color:white;font-weight:600;border-radius:40px;text-decoration:none;
+      transition:transform 0.3s;
+    }
+    .whatsapp-btn:hover {transform:scale(1.05);}
+    footer {
+      background:linear-gradient(to right,#fff7d6,#fff);
+      text-align:center;padding:20px;font-size:0.9rem;color:#777;
+    }
+
+    @media (max-width:768px){
+      header h1{font-size:1.6rem;}
+      .dash-box{min-width:150px;}
+      .extra-video{width:90%;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpeg" alt="Yaaron Ki Sawari Logo">
+    <h1>Yaaron Ki Sawari</h1>
+    <div class="shimmer">WALL OF FAME ✨</div>
+    <p>Celebrating our happiest travelers and their unforgettable journeys</p>
+  </header>
+
+  <section class="dashboard">
+    <div class="dash-box">
+      <h2>⭐ 250+</h2><p>Review Videos</p>
+    </div>
+    <div class="dash-box">
+      <h2>🌍 800+</h2><p>Happy Travelers</p>
+    </div>
+    <div class="dash-box">
+      <h2>🏆 5</h2><p>Featured Guests This Month</p>
+    </div>
+  </section>
+
+  <section class="slider">
+    <button class="nav-btn prev">&#10094;</button>
+    <div class="slides">
+      <div class="slide"><video src="video1.mp4" controls></video><div class="slide-info"><h3>🏆 Meghna</h3><p>"Bhutan — an unforgettable trip with Yaaron Ki Sawari!"</p></div></div>
+      <div class="slide"><video src="video2.mp4" controls></video><div class="slide-info"><h3>🏆 Ruth</h3><p>"Bhutan — pure happiness and comfort throughout!"</p></div></div>
+      <div class="slide"><video src="video3.mp4" controls></video><div class="slide-info"><h3>🏆 Dinky & Meet</h3><p>"Sikkim — unforgettable memories!"</p></div></div>
+    </div>
+    <button class="nav-btn next">&#10095;</button>
+  </section>
+
+  <section class="extra-videos">
+    <div class="extra-video">
+      <video src="video4.mp4" controls></video>
+      <p><strong>Srikhant & Wife</strong> — Andaman & Nicobar</p>
+    </div>
+    <div class="extra-video">
+      <video src="video5.mp4" controls></video>
+      <p><strong>Mukesh & Friends</strong> — Meghalaya</p>
+    </div>
+  </section>
+
+  <section class="review-links">
+    <h2>Leave Your Review 🌟</h2>
+    <a href="https://g.page/r/CSIcPi8yEnzdEAE/review" target="_blank">Google Review</a>
+    <a href="https://www.tripadvisor.in/UserReviewEdit-g659786-d20355637-Yarokisawari_Board_With_Your_Buddy-Siliguri_Darjeeling_District_West_Bengal.html" target="_blank">TripAdvisor Review</a>
+  </section>
+
+  <a class="whatsapp-btn" id="waBtn" href="https://wa.me/919593753131" target="_blank">📩 Send Your Video</a>
+
+  <footer>
+    © 2025 Yaaron Ki Sawari Holidays — “Your Ultimate Travel Buddy” ✈️
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+    // Confetti on page load
+    window.onload = () => {
+      setTimeout(() => {
+        confetti({particleCount:150,spread:80,origin:{y:0.6}});
+      }, 500);
+    };
+    // Confetti on WhatsApp click
+    document.getElementById('waBtn').addEventListener('click', () => {
+      confetti({particleCount:100,spread:70,origin:{y:0.7}});
+    });
+
+    // Slider logic
+    const slides=document.querySelector('.slides');
+    const slideCount=document.querySelectorAll('.slide').length;
+    let index=0;
+    document.querySelector('.next').onclick=()=>{index=(index+1)%slideCount;slides.style.transform=`translateX(-${index*100}%)`;};
+    document.querySelector('.prev').onclick=()=>{index=(index-1+slideCount)%slideCount;slides.style.transform=`translateX(-${index*100}%)`;};
+  </script>
+</body>
+</html>
